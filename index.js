@@ -1,25 +1,17 @@
 /*
- * Title:  
- * Description: 
- * Author: 
- * Date: 09/12/23
+ * Title: Server file
+ * Description: Run server.
+ * Author: Md Abdullah
+ * Date: 11/18/23
  */
 
 
-const express = require("express");
-const app = express();
+//Dependencies:
+const app = require("./src/app");
 require("dotenv").config();
 
 
-
 const PORT = process.env.PORT;
-app.get("/", (req, res) => {
-    res.json("Hello World!")
-})
-app.get("/signin", (req, res) => {
-    res.json("Hello Signin!")
-})
-
 app.listen(PORT, (err) => {
     console.log(`Server running on port ${PORT}`);
 })
