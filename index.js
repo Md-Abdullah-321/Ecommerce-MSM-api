@@ -16,6 +16,9 @@ const PORT = process.env.PORT;
 app.get("/", (req, res) => {
     res.json("Hello World!")
 })
+app.get("/signin", (req, res) => {
+    res.json("Hello Signin!")
+})
 
 app.listen(PORT, (err) => {
     console.log(`Server running on port ${PORT}`);
