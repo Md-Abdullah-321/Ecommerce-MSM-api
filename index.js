@@ -8,12 +8,15 @@
 
 //Dependencies:
 const app = require("./src/app");
+const connectionDB = require("./src/config/db");
 require("dotenv").config();
 
 
 const PORT = process.env.PORT;
-app.listen(PORT, (err) => {
+app.listen(PORT, async(err) => {
     console.log(`Server running on port ${PORT}`);
+
+    await connectionDB();
 });
 
 
